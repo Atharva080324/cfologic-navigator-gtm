@@ -616,8 +616,7 @@
         <span class="brand-tag">AI GTM Plan</span>
       </div>
       <div class="header-actions">
-        <button class="btn btn-secondary" onclick="openModal(0)">Open Flowcharts</button>
-        <button class="btn btn-primary" onclick="copyLinkedInMessage()">Copy LinkedIn Note</button>
+        <button class="btn btn-primary" onclick="openModal(0)">View Flowcharts</button>
       </div>
     </div>
   </header>
@@ -1054,6 +1053,41 @@
 
       container.scrollLeft = 0;
     }
+
+    // Automatic horizontal scroll on mouse wheel hover
+    const flowContainer = document.getElementById('flowPipeline');
+    flowContainer.addEventListener('wheel', (evt) => {
+      if (evt.deltaY !== 0) {
+        evt.preventDefault();
+        flowContainer.scrollLeft += evt.deltaY * 1.5;
+      }
+    }, { passive: false });
+
+    // Drag-to-scroll support
+    let isDown = false;
+    let startX, scrollLeftPos;
+
+    flowContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      flowContainer.style.cursor = 'grabbing';
+      startX = e.pageX - flowContainer.offsetLeft;
+      scrollLeftPos = flowContainer.scrollLeft;
+    });
+    flowContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      flowContainer.style.cursor = 'default';
+    });
+    flowContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      flowContainer.style.cursor = 'default';
+    });
+    flowContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - flowContainer.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      flowContainer.scrollLeft = scrollLeftPos - walk;
+    });
 
     // AI SIMULATOR
     function runSim(scenario) {
