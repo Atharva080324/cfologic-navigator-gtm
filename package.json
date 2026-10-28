@@ -1,0 +1,9 @@
+{
+  "name": "cfologic-navigator-ai-gtm",
+  "version": "1.0.0",
+  "description": "AI-Powered GTM Engine & Case Study for CFOLogic and NavigatorHQ",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
