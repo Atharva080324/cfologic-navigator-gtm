@@ -3,35 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI GTM Plan | CFOLogic & NavigatorHQ</title>
+  <title>AI GTM Plan v2 | CFOLogic & NavigatorHQ</title>
+  <meta name="description" content="Executive AI Go-To-Market strategy for Navigator and CFOLogic — 5 growth motions targeting multi-entity business owners.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0064F1;
-      --primary-hover: #0052C7;
-      --primary-light: #EFF6FF;
-      --bg: #FFFFFF;
-      --bg-subtle: #F9FAFB;
-      --card-bg: #FFFFFF;
-      --border: #E5E7EB;
-      --border-focus: #93C5FD;
-      --text: #111827;
-      --text-muted: #4B5563;
-      --text-dim: #9CA3AF;
-      --emerald: #059669;
-      --amber: #D97706;
-      --font: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --bg: #F8F9FA;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F3F5;
+      --border: #DDE1E6;
+      --border-strong: #0F172A;
+      --text: #0F172A;
+      --text-muted: #475569;
+      --text-dim: #94A3B8;
+      
+      --brand-dark: #0F172A;
+      --brand-accent: #0A369D;
+      --brand-emerald: #047857;
+      --brand-amber: #B45309;
+      
+      --font-display: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important; /* STRICTLY ZERO CURVED RECTANGLES */
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
     body {
-      background: var(--bg);
+      background-color: var(--bg);
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+      background-size: 36px 36px;
       color: var(--text);
-      font-family: var(--font);
+      font-family: var(--font-body);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
@@ -41,14 +58,14 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(248, 249, 250, 0.96);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-strong);
       padding: 0.85rem 1.5rem;
     }
 
     .header-inner {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -58,18 +75,34 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.75rem;
+      font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
     }
 
     .brand-tag {
-      background: var(--primary-light);
-      color: var(--primary);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      padding: 0.15rem 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
       font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .v2-badge {
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      padding: 0.15rem 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
     .header-actions {
@@ -81,80 +114,97 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 600;
+      gap: 0.5rem;
+      padding: 0.45rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      border: 1px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: var(--font-mono);
       transition: all 0.15s ease;
-      font-family: inherit;
+      border: 1px solid var(--border-strong);
     }
 
     .btn-primary {
-      background: var(--primary);
-      color: #FFF;
+      background: var(--brand-dark);
+      color: #FFFFFF;
     }
-    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-primary:hover {
+      background: #FFFFFF;
+      color: var(--brand-dark);
+    }
 
     .btn-secondary {
-      background: #FFF;
+      background: var(--surface);
       color: var(--text);
       border-color: var(--border);
     }
-    .btn-secondary:hover { background: var(--bg-subtle); border-color: var(--border-focus); }
+    .btn-secondary:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-subtle);
+    }
 
     /* LAYOUT */
     .container {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
+      padding: 2.5rem 1.5rem 5rem;
     }
 
     /* HERO */
     .hero {
-      text-align: center;
+      text-align: left;
       padding: 2.5rem 0 3rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border-strong);
+      margin-bottom: 3.5rem;
     }
 
-    .hero-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
+    .hero-meta-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-      background: var(--primary-light);
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    .hero-tag {
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      padding: 0.2rem 0.55rem;
+      font-weight: 700;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--text);
     }
 
     .hero p {
       font-size: 1.05rem;
       color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto;
+      max-width: 820px;
+      line-height: 1.6;
     }
 
     /* STATS ROW */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 0;
+      margin-top: 2.5rem;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
     }
 
     @media (max-width: 768px) {
@@ -162,33 +212,39 @@
     }
 
     .stat-card {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.1rem;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
       text-align: left;
+    }
+    .stat-card:last-child {
+      border-right: none;
     }
 
     .stat-val {
-      font-size: 1.45rem;
-      font-weight: 800;
+      font-size: 1.35rem;
+      font-weight: 700;
       font-family: var(--font-mono);
-      color: var(--primary);
-      margin-bottom: 0.2rem;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.02em;
     }
 
     .stat-title {
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-size: 0.78rem;
+      font-family: var(--font-body);
       color: var(--text-muted);
+      line-height: 1.4;
     }
 
     /* SECTION BASICS */
     .section-title {
-      font-size: 1.35rem;
-      font-weight: 800;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
       margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      color: var(--text);
     }
 
     .section-sub {
@@ -199,9 +255,8 @@
 
     /* THE STRATEGY CARD (FLYWHEEL) */
     .flywheel-card {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
       padding: 1.75rem;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -215,40 +270,47 @@
     }
 
     .fly-block {
-      background: #FFF;
+      background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
+      padding: 1.4rem;
     }
 
     .fly-tag {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 0.3rem;
+      letter-spacing: 0.08em;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
     }
 
     .fly-title {
-      font-size: 1.05rem;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
     }
 
     .fly-text {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     .fly-arrow {
+      font-family: var(--font-mono);
       font-size: 1.5rem;
-      color: var(--primary);
-      font-weight: 800;
+      color: var(--text);
+      font-weight: 700;
       text-align: center;
+      padding: 0 0.5rem;
     }
 
-    /* 4 PILLARS GRID */
-    .pillars-grid {
+    /* 5 MOTIONS GRID */
+    .motions-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.25rem;
@@ -256,147 +318,306 @@
     }
 
     @media (max-width: 768px) {
-      .pillars-grid { grid-template-columns: 1fr; }
+      .motions-grid { grid-template-columns: 1fr; }
     }
 
-    .pillar-box {
-      background: #FFF;
+    .motion-box {
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
+      padding: 1.6rem;
       cursor: pointer;
       transition: all 0.15s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
     }
 
-    .pillar-box:hover {
-      border-color: var(--primary);
-      box-shadow: 0 4px 14px rgba(0, 100, 241, 0.08);
+    .motion-box:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 4px 0 var(--border-strong);
       transform: translateY(-2px);
     }
 
-    .pillar-num {
+    .motion-box.highlight {
+      border: 2px solid var(--border-strong);
+      background: var(--surface);
+    }
+
+    .motion-box.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .motion-num {
       font-size: 0.72rem;
       font-weight: 700;
-      color: var(--primary);
       font-family: var(--font-mono);
-      margin-bottom: 0.5rem;
-    }
-
-    .pillar-h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .pillar-simple-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 1.2rem;
-    }
-
-    .pillar-click {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--primary);
+      margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      justify-content: space-between;
     }
 
-    /* SIMULATOR & CALCULATOR */
-    .split-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+    .motion-num .label {
+      color: var(--text);
+      letter-spacing: 0.06em;
+    }
+
+    .motion-num .priority-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+      background: var(--surface-subtle);
+      color: var(--text);
+    }
+
+    .motion-box.highlight .motion-num .priority-badge {
+      background: var(--border-strong);
+      color: #FFFFFF;
+      border-color: var(--border-strong);
+    }
+
+    .motion-h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .motion-simple-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1.4rem;
+    }
+
+    .motion-click {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: var(--font-mono);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .motion-box:hover .motion-click {
+      color: var(--brand-accent);
+    }
+
+    /* TERMINAL PROTOTYPE */
+    .tool-box {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      padding: 1.5rem;
       margin-bottom: 3.5rem;
     }
 
-    @media (max-width: 850px) {
-      .split-grid { grid-template-columns: 1fr; }
-    }
-
-    .tool-box {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
-    }
-
-    .slider-item {
-      margin-bottom: 1rem;
-    }
-
-    .slider-label {
+    .terminal-bar {
       display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    input[type=range] {
-      width: 100%;
-      height: 5px;
-      background: #E5E7EB;
-      border-radius: 3px;
-      outline: none;
-      -webkit-appearance: none;
-    }
-
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--primary);
-      cursor: pointer;
-    }
-
-    .calc-box {
-      background: #FFF;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      margin-top: 1rem;
-    }
-
-    .calc-stat-group {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 0.4rem 0;
+      justify-content: space-between;
       border-bottom: 1px solid var(--border);
-      font-size: 0.85rem;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
     }
 
-    .calc-stat-group:last-child { border-bottom: none; }
+    .terminal-dots {
+      display: inline-flex;
+      gap: 0.35rem;
+    }
+    .terminal-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--border-strong);
+    }
 
-    .calc-bold {
+    .sim-output-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      font-size: 0.86rem;
+    }
+
+    .sim-q {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .sim-a {
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    .sim-meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    /* NORTH STAR METRIC */
+    .north-star {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-left: 5px solid var(--border-strong);
+      padding: 1.4rem 1.75rem;
+      margin-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .north-star-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      padding: 0.2rem 0.5rem;
+      align-self: flex-start;
+      margin-bottom: 0.25rem;
+    }
+
+    .north-star h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .north-star p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* 30-60-90 TIMELINE */
+    .timeline-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-grid { grid-template-columns: 1fr; }
+    }
+
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--border-strong);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .timeline-phase {
+      font-size: 0.72rem;
       font-weight: 700;
       font-family: var(--font-mono);
-      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.85rem;
+      color: var(--text);
+    }
+
+    .timeline-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-list li {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .timeline-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: var(--text);
+      font-size: 0.8rem;
+    }
+
+    .timeline-milestone {
+      padding: 0.65rem 0.85rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--border-strong);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      font-family: var(--font-body);
     }
 
     /* CANDIDATE INFO */
     .profile-card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
-      background: #FFF;
-      margin-bottom: 3rem;
+      border: 1px solid var(--border-strong);
+      padding: 1.6rem;
+      background: var(--surface);
+      margin-bottom: 3.5rem;
+    }
+
+    .profile-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+      color: var(--text);
     }
 
     /* ==========================================================================
-       CLEAN, MINIMAL, UNBLOCKED FLOWCHART MODAL
+       MODAL: FLOWCHART (STRICTLY 0px BORDER RADIUS)
        ========================================================================== */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(17, 24, 39, 0.4);
+      background: rgba(15, 23, 42, 0.7);
       backdrop-filter: blur(4px);
       z-index: 100;
       display: none;
@@ -412,10 +633,9 @@
     .modal-container {
       background: #FFFFFF;
       width: 100%;
-      max-width: 1020px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+      max-width: 860px;
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 16px 0 rgba(15, 23, 42, 0.2);
       display: flex;
       flex-direction: column;
       max-height: 90vh;
@@ -429,166 +649,331 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #FFF;
+      background: var(--surface);
     }
 
-    .pillar-tabs {
+    .motion-tabs {
       display: flex;
       gap: 0.4rem;
       flex-wrap: wrap;
     }
 
     .tab-btn {
-      background: var(--bg-subtle);
+      background: var(--surface-subtle);
       border: 1px solid var(--border);
-      padding: 0.35rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.72rem;
+      font-weight: 700;
       color: var(--text-muted);
       cursor: pointer;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text);
     }
 
     .tab-btn.active {
-      background: var(--primary);
-      color: #FFF;
-      border-color: var(--primary);
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      border-color: var(--brand-dark);
     }
 
     .close-btn {
       background: none;
-      border: none;
-      font-size: 1.2rem;
+      border: 1px solid transparent;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
       color: var(--text-dim);
       cursor: pointer;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
+      padding: 0.25rem 0.6rem;
     }
-    .close-btn:hover { color: var(--text); background: var(--bg-subtle); }
+    .close-btn:hover {
+      color: var(--text);
+      border-color: var(--border);
+      background: var(--surface-subtle);
+    }
 
     /* Modal Title Section */
     .modal-headline {
-      padding: 1.1rem 1.5rem 0.8rem;
-      background: #FAFAFB;
+      padding: 1.25rem 1.5rem 0.9rem;
+      background: var(--surface-subtle);
       border-bottom: 1px solid var(--border);
     }
 
     .modal-tag-pill {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
     }
 
     .modal-main-title {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: var(--text);
     }
 
     .modal-simple-sub {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-top: 0.25rem;
+      margin-top: 0.3rem;
     }
 
-    /* Flowchart Horizontal Pipeline Area */
+    /* Flowchart Vertical Pipeline Area */
     .flow-pipeline-scroll {
       padding: 1.5rem;
-      overflow-x: auto;
-      overflow-y: hidden;
-      background: #FFFFFF;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: var(--bg);
       display: flex;
+      flex-direction: column;
       align-items: stretch;
-      gap: 0.75rem;
+      gap: 0;
       scroll-behavior: smooth;
+      max-height: 58vh;
     }
 
     .flow-pipeline-scroll::-webkit-scrollbar {
-      height: 6px;
+      width: 6px;
     }
     .flow-pipeline-scroll::-webkit-scrollbar-thumb {
-      background: #D1D5DB;
-      border-radius: 3px;
+      background: var(--border-strong);
     }
 
     /* FLOWCHART STEP CARD */
     .flow-card {
-      width: 250px;
-      min-width: 250px;
+      width: 100%;
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.1rem;
+      padding: 1.25rem 1.4rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      gap: 0.6rem;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    .flow-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 3px 0 var(--border-strong);
+    }
+
+    .flow-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .flow-step-num {
-      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.55rem;
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      font-size: 0.68rem;
       font-weight: 700;
-      color: var(--primary);
       font-family: var(--font-mono);
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
     }
 
     .flow-card-title {
-      font-size: 0.95rem;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+      margin: 0;
     }
 
     .flow-card-text {
-      font-size: 0.82rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     .flow-card-bullets {
       list-style: none;
-      margin-top: 0.6rem;
+      margin-top: 0.25rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
+      flex-wrap: wrap;
+      gap: 0.45rem;
     }
 
     .flow-card-bullets li {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      background: var(--bg-subtle);
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      border-left: 2px solid var(--primary);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.6rem;
+      display: inline-flex;
+      align-items: center;
     }
 
-    /* FLOWCHART ARROW CONNECTOR */
+    /* FLOWCHART VERTICAL ARROW CONNECTOR */
     .flow-arrow-divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      flex-shrink: 0;
-      color: var(--primary);
-      font-size: 1.25rem;
+      position: relative;
+      height: 38px;
+      margin: 0;
+    }
+
+    .flow-arrow-divider::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border-strong);
+      z-index: 0;
+    }
+
+    .flow-arrow-badge {
+      position: relative;
+      z-index: 1;
+      width: 22px;
+      height: 22px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
       font-weight: 800;
     }
 
     /* Modal Bottom Meta Box */
     .modal-footer-stats {
       padding: 0.9rem 1.5rem;
-      background: #FAFAFB;
+      background: var(--surface-subtle);
       border-top: 1px solid var(--border);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    @media (max-width: 600px) {
-      .modal-footer-stats { grid-template-columns: 1fr; }
+    @media (max-width: 640px) {
+      header {
+        padding: 0.75rem 1rem;
+      }
+      .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+      .brand {
+        font-size: 0.85rem;
+        gap: 0.4rem;
+      }
+      .brand-tag {
+        display: none;
+      }
+      .v2-badge {
+        font-size: 0.62rem;
+        padding: 0.15rem 0.35rem;
+      }
+      .btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.7rem;
+      }
+      .container {
+        padding: 1.5rem 1rem 3.5rem;
+      }
+      .hero {
+        padding: 1.75rem 0 2.25rem;
+        margin-bottom: 2.25rem;
+      }
+      .hero h1 {
+        font-size: 1.85rem;
+        line-height: 1.2;
+      }
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+      .stat-card {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.15rem;
+      }
+      .stat-card:last-child {
+        border-bottom: none;
+      }
+      .flywheel-card {
+        padding: 1.25rem;
+        gap: 1rem;
+      }
+      .fly-arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+      }
+      .tool-box {
+        padding: 1.15rem;
+      }
+      .terminal-bar {
+        font-size: 0.65rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .north-star {
+        padding: 1.15rem;
+      }
+      .timeline-card {
+        padding: 1.25rem;
+      }
+      .profile-card {
+        padding: 1.25rem;
+      }
+      .modal-overlay {
+        padding: 0.5rem;
+      }
+      .modal-container {
+        max-height: 94vh;
+      }
+      .modal-headline {
+        padding: 1rem;
+      }
+      .modal-main-title {
+        font-size: 1.15rem;
+      }
+      .flow-pipeline-scroll {
+        padding: 1rem;
+      }
+      .flow-card {
+        padding: 1rem;
+      }
+      .flow-card-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+      .flow-card-bullets {
+        flex-direction: column;
+      }
+      .flow-card-bullets li {
+        width: 100%;
+      }
+      .modal-footer-stats {
+        padding: 0.85rem 1rem;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
     }
 
     .foot-stat-item {
@@ -598,11 +983,29 @@
     .foot-stat-item strong {
       display: block;
       color: var(--text);
-      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
     }
 
     .foot-stat-item span {
       color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-strong);
+      padding: 1.75rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      background: var(--surface);
     }
   </style>
 </head>
@@ -612,8 +1015,9 @@
   <header>
     <div class="header-inner">
       <div class="brand">
-        <span>CFOLogic × NavigatorHQ</span>
-        <span class="brand-tag">AI GTM Plan</span>
+        <span>CFOLogic // NavigatorHQ</span>
+        <span class="brand-tag">GTM SPEC v2.4</span>
+        <span class="v2-badge">VERIFIED</span>
       </div>
       <div class="header-actions">
         <button class="btn btn-primary" onclick="openModal(0)">View Flowcharts</button>
@@ -624,207 +1028,286 @@
   <main class="container">
 
     <!-- HERO -->
-    <section class="hero">
-      <span class="hero-label">Case Study for Prasad Bhalerao</span>
-      <h1>How to Scale Navigator & CFOLogic with AI</h1>
+    <section class="hero" id="hero">
+      <div class="hero-meta-bar">
+        <span class="hero-tag">CASE STUDY</span>
+        <span>FOR PRASAD BHALERAO // GTM STRATEGY</span>
+      </div>
+      <h1>5 Growth Motions for Navigator & CFOLogic</h1>
       <p>
-        A simple plan: use <strong>Navigator ($299/mo software)</strong> to hook founders, and use AI to automatically upgrade them to <strong>CFOLogic ($3,000/mo CFO retainers)</strong>.
+        After researching Navigator and CFOLogic more deeply, I updated my original plan. Navigator earns its own revenue as a product. Some customers will also need human financial expertise from CFOLogic. AI helps research, prepare and route — <strong>humans approve what customers see.</strong>
       </p>
 
       <div class="stats-row">
         <div class="stat-card">
-          <div class="stat-val">&lt; 21 Days</div>
-          <div class="stat-title">Sales Cycle (Down from 60d)</div>
+          <div class="stat-val">5 MOTIONS</div>
+          <div class="stat-title">Partners → Health Check → PQL → Marketplaces → Outbound</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">~$250/mo</div>
-          <div class="stat-title">AI Tooling Cost (vs $7k SDR)</div>
+          <div class="stat-val">PARTNERS FIRST</div>
+          <div class="stat-title">One accounting firm can bring 10–50 client entities</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">$299 → $3,500</div>
-          <div class="stat-title">Software to Retainer Upsell</div>
+          <div class="stat-val">MULTI-ENTITY</div>
+          <div class="stat-title">Purpose-built for owners with 2+ QuickBooks companies</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val">100% Safe</div>
-          <div class="stat-title">QuickBooks Read-Only OAuth</div>
+          <div class="stat-val">AI + HUMAN</div>
+          <div class="stat-title">AI prepares and verifies; humans approve and send</div>
         </div>
       </div>
     </section>
 
-    <!-- THE DUAL FLYWHEEL STRATEGY -->
+    <!-- THE STRATEGY -->
     <section>
       <h2 class="section-title">The Strategy in 1 Minute</h2>
-      <p class="section-sub">Why selling software + CFO services together wins.</p>
+      <p class="section-sub">Navigator earns its own revenue. CFOLogic supports owners who need more than software.</p>
 
       <div class="flywheel-card">
         <div class="fly-block">
-          <div class="fly-tag">Step 1: The Easy Hook</div>
-          <div class="fly-title">NavigatorHQ ($299/mo)</div>
+          <div class="fly-tag">Navigator — Software Product</div>
+          <div class="fly-title">Multi-Entity Financial Intelligence</div>
           <div class="fly-text">
-            Founders try the software because it fixes multi-entity QuickBooks spreadsheets and lets them ask questions in plain English.
+            Business owners try Navigator because it brings multiple QuickBooks companies together and lets them ask questions in plain English. Every number traces back to the original transaction.
           </div>
         </div>
 
-        <div class="fly-arrow">➔</div>
+        <div class="fly-arrow">→</div>
 
         <div class="fly-block">
-          <div class="fly-tag">Step 2: The Big Revenue</div>
-          <div class="fly-title">CFOLogic ($1,999–$4,500/mo)</div>
+          <div class="fly-tag">CFOLogic — Human Expertise</div>
+          <div class="fly-title">Full-Stack Finance for Growing Businesses</div>
           <div class="fly-text">
-            When the founder has a cash crunch or needs board reports, CFOLogic steps in with human CFO advisory from the US & Pune team.
+            When an owner needs more than software — forecasting, loan compliance, board packs, or a full finance function — CFOLogic steps in with US-facing advisors and a Pune delivery team.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4 PILLARS INTERACTIVE GRID -->
-    <section>
-      <h2 class="section-title">The 4 AI Pillars</h2>
-      <p class="section-sub">Click any card below to see its exact step-by-step flowchart.</p>
+    <!-- 5 MOTIONS INTERACTIVE GRID -->
+    <section id="motions">
+      <h2 class="section-title">5 Growth Motions</h2>
+      <p class="section-sub">Click any motion to inspect its step-by-step workflow architecture.</p>
 
-      <div class="pillars-grid">
-        <div class="pillar-box" onclick="openModal(0)">
+      <div class="motions-grid">
+        <!-- Motion A -->
+        <div class="motion-box highlight" onclick="openModal(0)">
           <div>
-            <div class="pillar-num">PILLAR 01</div>
-            <h3 class="pillar-h3">Smart Outbound Bot</h3>
-            <p class="pillar-simple-desc">
-              Finds companies that just hired an accountant or opened a second branch, and sends a personalized 1-on-1 email.
+            <div class="motion-num">
+              <span class="label">MOTION A // PARTNER CHANNEL</span>
+              <span class="priority-badge">Highest Priority</span>
+            </div>
+            <h3 class="motion-h3">Accounting-Firm Partner Channel</h3>
+            <p class="motion-simple-desc">
+              Build the accounting-firm, bookkeeping-firm and fractional-CFO partner channel. One firm can bring 10–50 entities. Navigator already has a 25%-revenue-share partner program.
             </p>
           </div>
-          <div class="pillar-click">View Flowchart ➔</div>
+          <div class="motion-click">
+            <span>Explore Workflow</span>
+            <span>→</span>
+          </div>
         </div>
 
-        <div class="pillar-box" onclick="openModal(1)">
+        <!-- Motion B -->
+        <div class="motion-box" onclick="openModal(1)">
           <div>
-            <div class="pillar-num">PILLAR 02</div>
-            <h3 class="pillar-h3">Free 3-Min Audit</h3>
-            <p class="pillar-simple-desc">
-              A free website tool where founders connect QuickBooks in 60s (read-only) and get a free checkup on cash leaks.
+            <div class="motion-num">
+              <span class="label">MOTION B // DIAGNOSTIC ENTRY</span>
+              <span class="priority-badge">High Priority</span>
+            </div>
+            <h3 class="motion-h3">Health Check as Entry Point</h3>
+            <p class="motion-simple-desc">
+              Make the existing 51-check Health Check the main way owners discover Navigator. AI generates advisor briefs and routes each person to the right next step.
             </p>
           </div>
-          <div class="pillar-click">View Flowchart ➔</div>
+          <div class="motion-click">
+            <span>Explore Workflow</span>
+            <span>→</span>
+          </div>
         </div>
 
-        <div class="pillar-box" onclick="openModal(2)">
+        <!-- Motion C -->
+        <div class="motion-box" onclick="openModal(2)">
           <div>
-            <div class="pillar-num">PILLAR 03</div>
-            <h3 class="pillar-h3">In-App Upsell Trigger</h3>
-            <p class="pillar-simple-desc">
-              When a software user asks the AI: "How do I cut burn?", Prasad gets an alert in Slack to offer human CFO services.
+            <div class="motion-num">
+              <span class="label">MOTION C // TELEMETRY & ACTIVATION</span>
+              <span class="priority-badge">High Priority</span>
+            </div>
+            <h3 class="motion-h3">Trial Activation & PQL Scoring</h3>
+            <p class="motion-simple-desc">
+              Help trial users become active customers. Score product-qualified leads using product events — not private chat messages. Protect partner accounts from direct upselling.
             </p>
           </div>
-          <div class="pillar-click">View Flowchart ➔</div>
+          <div class="motion-click">
+            <span>Explore Workflow</span>
+            <span>→</span>
+          </div>
         </div>
 
-        <div class="pillar-box" onclick="openModal(3)">
+        <!-- Motion D -->
+        <div class="motion-box" onclick="openModal(3)">
           <div>
-            <div class="pillar-num">PILLAR 04</div>
-            <h3 class="pillar-h3">Authority Engine</h3>
-            <p class="pillar-simple-desc">
-              AI automatically drafts weekly LinkedIn breakdowns and finance calculators so founders see Prasad as the top expert.
+            <div class="motion-num">
+              <span class="label">MOTION D // ECOSYSTEMS</span>
+              <span class="priority-badge">Medium Priority</span>
+            </div>
+            <h3 class="motion-h3">Marketplaces, Lenders & Franchisors</h3>
+            <p class="motion-simple-desc">
+              Use organisations that already reach Navigator's customers: Intuit App Store, Cloudbeds/ServiceTitan, SBA lenders and franchise networks.
             </p>
           </div>
-          <div class="pillar-click">View Flowchart ➔</div>
+          <div class="motion-click">
+            <span>Explore Workflow</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- Motion E — full width -->
+        <div class="motion-box full-width" onclick="openModal(4)">
+          <div>
+            <div class="motion-num">
+              <span class="label">MOTION E // PRECISION OUTBOUND</span>
+              <span class="priority-badge">Medium Priority</span>
+            </div>
+            <h3 class="motion-h3">Targeted Outbound + Content Distribution</h3>
+            <p class="motion-simple-desc">
+              Start small: 150–300 accounts/month, using real business signals (new LLCs, SBA loans, multi-unit franchises). The offer is the free Health Check, not a sales call. AI researches and drafts; a human checks and sends. Existing Insights become LinkedIn posts and free calculators.
+            </p>
+          </div>
+          <div class="motion-click">
+            <span>Explore Workflow</span>
+            <span>→</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- LIVE DEMO & ROI -->
-    <section>
-      <div class="split-grid">
-        <!-- Live AI Demo Simulator -->
-        <div class="tool-box">
-          <h3 style="font-size: 1.05rem; font-weight:700; margin-bottom:0.4rem;">Prototype: How the AI Answers</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Click a scenario to see how Navigator's AI answers a founder.</p>
+    <!-- LIVE AI PROTOTYPE -->
+    <section id="tools">
+      <h2 class="section-title">Prototype: How Navigator's AI Answers</h2>
+      <p class="section-sub">Mock-up console — in production, numbers derive via SQL over synced ledger data, traceable to the original transaction.</p>
 
-          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-            <button class="btn btn-secondary" onclick="runSim(1)">Ask about Hiring</button>
-            <button class="btn btn-secondary" onclick="runSim(2)">Ask about Cash Leaks</button>
+      <div class="tool-box" style="max-width: 780px;">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
           </div>
-
-          <div style="background: #FFF; border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem; font-size: 0.82rem;">
-            <div id="sim-q" style="font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">
-              "What happens if we hire 2 engineers next month?"
-            </div>
-            <div id="sim-a" style="color: var(--text-muted); line-height: 1.45;">
-              "Adding 2 engineers ($22k/mo) drops your runway from <strong>4.2 months to 3.1 months</strong>. Recommended: Review your working capital with CFOLogic."
-            </div>
-          </div>
+          <span>SQL-VERIFIED REASONING ENGINE // TELEMETRY TERMINAL</span>
         </div>
 
-        <!-- ROI Calculator -->
-        <div class="tool-box">
-          <h3 style="font-size: 1.05rem; font-weight:700; margin-bottom:0.4rem;">Pipeline & Revenue Calculator</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Adjust numbers to see projected new monthly revenue.</p>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary" onclick="runSim(1)">Hiring Impact</button>
+          <button class="btn btn-secondary" onclick="runSim(2)">Cash Leaks</button>
+          <button class="btn btn-secondary" onclick="runSim(3)">Multi-Entity View</button>
+        </div>
 
-          <div class="slider-item">
-            <div class="slider-label">
-              <span>Target Accounts / Month</span>
-              <span id="txt-acc" style="color:var(--primary); font-family:var(--font-mono);">1,200</span>
-            </div>
-            <input type="range" id="rng-acc" min="300" max="2500" step="100" value="1200" oninput="calcROI()">
+        <div class="sim-output-box">
+          <div id="sim-q" class="sim-q">
+            "What happens if we hire 2 technicians on 1 November?"
           </div>
+          <div id="sim-a" class="sim-a">
+            Adding 2 technicians moves your 13-week cash position from <strong>$142k to $109k</strong>. Your DSCR stays above the covenant at <strong>1.35×</strong>. Source: Summit Electric payroll + cash forecast.
+          </div>
+          <div id="sim-cta" style="margin-top: 0.75rem;">
+            <button class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.75rem; pointer-events: none;">Request CFO Advisory Discovery →</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="calc-box">
-            <div class="calc-stat-group">
-              <span>Booked Discovery Calls:</span>
-              <span class="calc-bold" id="res-calls">27 calls</span>
-            </div>
-            <div class="calc-stat-group">
-              <span>Navigator Free Trials:</span>
-              <span class="calc-bold" id="res-trials">48 trials</span>
-            </div>
-            <div class="calc-stat-group">
-              <span>New CFO Retainers Signed:</span>
-              <span class="calc-bold" id="res-clients">5 clients</span>
-            </div>
-            <div class="calc-stat-group" style="padding-top: 0.5rem;">
-              <span style="font-weight: 700;">New Monthly Revenue:</span>
-              <span class="calc-bold" id="res-mrr" style="font-size:1.15rem;">+$18,500/mo</span>
-            </div>
+    <!-- NORTH STAR METRIC -->
+    <div class="north-star">
+      <span class="north-star-tag">NORTH-STAR DIRECTIVE</span>
+      <h4>Weekly Active Connected Entities</h4>
+      <p>This reflects whether customers are being acquired, activating and staying. More active entities grow Navigator revenue and create demand for CFOLogic advisory services.</p>
+    </div>
+
+    <!-- 30-60-90 TIMELINE -->
+    <section class="timeline-section" id="timeline">
+      <h2 class="section-title">30-60-90 Day Execution Plan</h2>
+      <p class="section-sub">Engineered deliverables at each phase.</p>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-phase">Days 01–30 // Phase 01</div>
+            <h4 class="timeline-h4">Foundation</h4>
+            <ul class="timeline-list">
+              <li>Funnel tracking: Health Check → trial → paid → call</li>
+              <li>Advisor brief generator (human-approved)</li>
+              <li>Firm-finder agent — first 100 partner prospects</li>
+            </ul>
           </div>
+          <div class="timeline-milestone">Funnel visible. First 5 partner conversations initiated.</div>
+        </div>
+
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-phase">Days 31–60 // Phase 02</div>
+            <h4 class="timeline-h4">Activation</h4>
+            <ul class="timeline-list">
+              <li>Onboarding assistant with data-driven reminders</li>
+              <li>PQL scoring using product events</li>
+              <li>Outbound pilot — 150 accounts, human-approved</li>
+            </ul>
+          </div>
+          <div class="timeline-milestone">3–5 partners signed. Activation-rate baseline established.</div>
+        </div>
+
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-phase">Days 61–90 // Phase 03</div>
+            <h4 class="timeline-h4">Scale What Works</h4>
+            <ul class="timeline-list">
+              <li>Partner onboarding kit & Console health alerts</li>
+              <li>Pilot with 1–2 lenders or franchisors</li>
+              <li>Written GTM review using real results</li>
+            </ul>
+          </div>
+          <div class="timeline-milestone">Scaling allocation decided strictly on real performance data.</div>
         </div>
       </div>
     </section>
 
     <!-- CANDIDATE PROFILE -->
-    <div class="profile-card">
-      <h3 style="font-size: 1.05rem; font-weight:700; margin-bottom:0.5rem;">Why Atharva Deshmukh?</h3>
-      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem;">
-        Final-year CS student from Aurangabad. I build LangGraph and RAG agents, and work at Growwithus Media automating lead generation. I write the code and know how to connect it to revenue.
+    <div class="profile-card" id="about">
+      <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem;">Candidate Dossier</div>
+      <h3>Why Atharva Deshmukh?</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+        Final-year CS student from Aurangabad. I build AI agents and automation systems — text-to-SQL, RAG pipelines, lead workflows — at Growwithus Media. I built this portal in two days, and this v2 shows I can take feedback, research deeper and correct my own work. I can build and operate these systems, starting this week.
       </p>
-      <div style="font-size: 0.78rem; font-weight: 600; color: var(--primary);">
-        Ready to build and deploy this system for CFOLogic & Navigator.
-      </div>
     </div>
 
   </main>
 
   <!-- ==========================================================================
-       MODAL: CLEAN MINIMAL FLOWCHART
+       MODAL: FLOWCHARTS FOR 5 MOTIONS
        ========================================================================== -->
   <div class="modal-overlay" id="flowModal" onclick="if(event.target===this) closeModal()">
     <div class="modal-container">
       
       <!-- Top Tabs -->
       <div class="modal-header">
-        <div class="pillar-tabs">
-          <button class="tab-btn active" onclick="loadPillar(0)">Pillar 1: Outbound Bot</button>
-          <button class="tab-btn" onclick="loadPillar(1)">Pillar 2: Free Audit</button>
-          <button class="tab-btn" onclick="loadPillar(2)">Pillar 3: Upsell Trigger</button>
-          <button class="tab-btn" onclick="loadPillar(3)">Pillar 4: Authority</button>
+        <div class="motion-tabs">
+          <button class="tab-btn active" onclick="loadMotion(0)">A: Partners</button>
+          <button class="tab-btn" onclick="loadMotion(1)">B: Health Check</button>
+          <button class="tab-btn" onclick="loadMotion(2)">C: PQL & Activation</button>
+          <button class="tab-btn" onclick="loadMotion(3)">D: Marketplaces</button>
+          <button class="tab-btn" onclick="loadMotion(4)">E: Outbound + Content</button>
         </div>
         <button class="close-btn" onclick="closeModal()">✕</button>
       </div>
 
       <!-- Headline -->
       <div class="modal-headline">
-        <div class="modal-tag-pill" id="mTag">PILLAR 1: SMART OUTBOUND BOT</div>
-        <div class="modal-main-title" id="mTitle">How It Finds & Reaches Founders on Autopilot</div>
-        <div class="modal-simple-sub" id="mSub">Follow the flowchart from left to right.</div>
+        <div class="modal-tag-pill" id="mTag">MOTION A: PARTNER CHANNEL</div>
+        <div class="modal-main-title" id="mTitle">Build the Accounting-Firm Partner Channel</div>
+        <div class="modal-simple-sub" id="mSub">Follow the flowchart from top to bottom.</div>
       </div>
 
-      <!-- Horizontal Flowchart Pipeline -->
+      <!-- Vertical Flowchart Pipeline -->
       <div class="flow-pipeline-scroll" id="flowPipeline">
         <!-- Injected via JavaScript -->
       </div>
@@ -832,167 +1315,213 @@
       <!-- Bottom Summary Details -->
       <div class="modal-footer-stats">
         <div class="foot-stat-item">
-          <strong>Monthly Tool Cost:</strong>
-          <span id="mCost">~$230 / month (vs $7,000 for a human SDR)</span>
+          <strong>What I Would Build:</strong>
+          <span id="mCost">Firm-finder agent, partner onboarding kit, weekly health alerts</span>
         </div>
         <div class="foot-stat-item">
           <strong>Why It Works:</strong>
-          <span id="mProof">Signal-based messages get 4.5% replies (vs 1% spam)</span>
+          <span id="mProof">One accounting firm can bring 10–50 entities; owners trust their accountant</span>
         </div>
         <div class="foot-stat-item">
-          <strong>Safety & Limitations:</strong>
-          <span id="mSafety">Uses secondary domains to protect company reputation</span>
+          <strong>Key Metrics:</strong>
+          <span id="mSafety">Partners signed, entities per partner, partner churn rate</span>
         </div>
       </div>
 
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer>
+    Case study by Atharva Deshmukh · AI GTM Plan v2 · November 2026
+  </footer>
+
   <script>
-    // CLEAN, MINIMAL 4-PILLAR FLOWCHART DATA
+    // ========================================================================
+    // 5-MOTION FLOWCHART DATA
+    // ========================================================================
     const flowData = [
       {
-        tag: "PILLAR 1: SMART OUTBOUND BOT",
-        title: "How It Finds & Reaches Founders on Autopilot",
-        sub: "Follow the 4-step pipeline from signal detection to booked call.",
-        cost: "~$230/mo (Apollo + Claude API + Instantly) vs $7,000/mo human SDR",
-        proof: "4.5% positive reply rate because it references real trigger events",
-        safety: "Uses separate secondary domains so CFOLogic.com never gets marked as spam",
+        // MOTION A: Partner Channel
+        tag: "MOTION A: PARTNER CHANNEL",
+        title: "Build the Accounting-Firm Partner Channel",
+        sub: "Highest priority. One firm can bring 10–50 entities. Navigator already has a 25% rev-share program.",
+        cost: "Firm-finder agent, partner onboarding kit, weekly Console health alerts",
+        proof: "One accounting firm can bring 10–50 entities; owners trust their accountant's recommendation",
+        safety: "Partners signed, entities per partner within 60d, activation rate, partner churn",
         steps: [
           {
             num: "STEP 1",
-            title: "Find Intent Signals",
-            text: "The bot watches for companies that just hired an accountant or opened a second branch.",
-            bullets: ["Watches Apollo & LinkedIn", "Checks for QuickBooks tags", "Only targets $2M–$20M revenue"]
+            title: "Find Target Firms",
+            text: "AI finds US accounting and bookkeeping firms that serve multi-entity businesses (hotels, franchises, real estate, construction).",
+            bullets: ["QuickBooks ProAdvisor directory", "Firm websites & LinkedIn (manual review)", "Score by client-type match"]
           },
           {
             num: "STEP 2",
-            title: "Write 1-on-1 Pitch",
-            text: "AI writes a short message about their exact problem (no generic spam templates).",
-            bullets: ["Mentions their 2 branches", "Highlights spreadsheet delay", "Keeps message under 75 words"]
+            title: "Draft Personalised Outreach",
+            text: "AI drafts a message with a real reason: 'Your site mentions 3 hotel groups.' Human checks and sends.",
+            bullets: ["Reference a specific detail", "Offer the partner program", "Human approves every message"]
           },
           {
             num: "STEP 3",
-            title: "Send via Email",
-            text: "Emails are sent slowly from warmed-up mailboxes to guarantee 99% inbox landing.",
-            bullets: ["Max 30 emails/day per inbox", "Soft teaser preview link", "Follow-up after 3 days"]
+            title: "Partner Onboarding Kit",
+            text: "Create a co-branded demo workspace, a 'first 3 clients' guide, and templated client invitation emails.",
+            bullets: ["Co-branded with partner's logo", "Console multi-client view", "Ready-to-send client emails"]
           },
           {
             num: "STEP 4",
-            title: "Booked Discovery Call",
-            text: "Interested founders click a link to book a 15-minute call directly with Prasad.",
-            bullets: ["Direct to Cal.com calendar", "Lead is pre-qualified", "Sales cycle starts warm"]
+            title: "Ongoing Partner Support",
+            text: "Weekly health alerts: which partner clients have stale data or stopped logging in. Partner can re-engage before churn.",
+            bullets: ["Automated stale-data alerts", "Partner receives the alert (not CFOLogic)", "25% rev-share for account lifetime"]
           }
         ]
       },
       {
-        tag: "PILLAR 2: FREE 3-MIN AUDIT",
-        title: "How the Free Checkup Hooks Founders",
-        sub: "A zero-risk way to get founders to connect their books.",
-        cost: "~$20/mo (free Intuit developer account + serverless Supabase)",
-        proof: "Founders love free health checks on their own numbers; 40% book follow-ups",
-        safety: "100% read-only connection. The tool cannot delete or edit any accounting data",
+        // MOTION B: Health Check
+        tag: "MOTION B: HEALTH CHECK AS ENTRY POINT",
+        title: "Make the Existing Health Check the Main Entry Point",
+        sub: "Free, read-only, 51 checks, named advisor, four recommendations. Improve distribution and conversion.",
+        cost: "Advisor brief generator, recommendation routing, follow-up sequences",
+        proof: "Free, credible, read-only — lower barrier than any sales call or demo request",
+        safety: "HC completion rate, HC→trial %, advisor follow-up time, drop-off at Intuit connect step",
         steps: [
           {
             num: "STEP 1",
-            title: "Connect in 60s",
-            text: "Founder connects QuickBooks via safe, read-only login on the website.",
-            bullets: ["100% Read-Only scope", "Zero risk of data changes", "Takes less than 1 minute"]
+            title: "Drive Traffic to Health Check",
+            text: "Use Insights articles, LinkedIn posts, partner referrals, lender partnerships and the Intuit App Store listing.",
+            bullets: ["SEO on existing Insights", "Partners offer HC to clients", "Lender co-branded HC"]
           },
           {
             num: "STEP 2",
-            title: "Check for Leaks",
-            text: "Simple math rules scan the books for late invoices and cash burn spikes.",
-            bullets: ["Calculates exact cash runway", "Finds overdue client invoices", "Flags mismatched transfers"]
+            title: "Owner Completes 51 Checks",
+            text: "Owner connects QuickBooks or Zoho in read-only mode. Receives score, findings and a named advisor.",
+            bullets: ["Read-only connection", "Score out of 100 (e.g. 46/100)", "Guest connection revoked after scan"]
           },
           {
             num: "STEP 3",
-            title: "Show Free Report",
-            text: "The founder immediately sees where their company is leaking cash.",
-            bullets: ["Clear summary in plain English", "Downloadable 1-page PDF", "Shows exact dollar risks"]
+            title: "AI Generates Advisor Brief",
+            text: "AI prepares a 1-page brief: top 3 findings, supporting traces, recommended next step, and suggested talking points.",
+            bullets: ["Advisor prep: ~10 min vs ~1 hour", "Every number traced to input data", "Advisor edits & approves before use"]
           },
           {
             num: "STEP 4",
-            title: "Book CFO Review",
-            text: "Founder is offered a 15-min call with Prasad to help them fix the leaks.",
-            bullets: ["Founder wants the call", "They see real value upfront", "High conversion to retainer"]
+            title: "Route to Right Next Step",
+            text: "Healthy business → Navigator trial. Messy books → partner/bookkeeper. Needs full finance function → CEO Navigator call. Not ready → nurture with Insights.",
+            bullets: ["4 recommendation paths", "CRM tags by recommendation", "Consent-based follow-up emails"]
           }
         ]
       },
       {
-        tag: "PILLAR 3: IN-APP UPSELL TRIGGER",
-        title: "How Software Users Become $3,000/mo Clients",
-        sub: "Watching for moments when a software user needs human help.",
-        cost: "~$20/mo (free PostHog event tier + Zapier/Slack webhooks)",
-        proof: "15%–25% conversion from active trial PQL to high-paying CFO retainer",
-        safety: "Never quotes private chats verbatim; reaches out based on company growth stage",
+        // MOTION C: PQL & Activation
+        tag: "MOTION C: TRIAL ACTIVATION & PQL SCORING",
+        title: "Help Trials Activate and Identify Product-Qualified Leads",
+        sub: "Use product events to score leads. Protect partner accounts. Never use private chat as sales trigger.",
+        cost: "Onboarding assistant, PQL scoring engine, optional 'Talk to a CFO' button",
+        proof: "Product activity signals real need; optional consent preserves trust",
+        safety: "Activation rate, trial→paid %, PQL→call %, 90-day retention, entities per account",
         steps: [
           {
             num: "STEP 1",
-            title: "User Signs Up",
-            text: "Founder starts their 30-day free trial on NavigatorHQ ($299/mo).",
-            bullets: ["Connects multiple entities", "Starts asking AI questions", "Uses software daily"]
+            title: "Define Activation",
+            text: "Within 7 days: connect ≥2 entities, match bank transactions, open morning view 3+ days or ask 3+ questions.",
+            bullets: ["Proposed definition — verify with data", "Track activated vs non-activated", "Focus onboarding on these steps"]
           },
           {
             num: "STEP 2",
-            title: "Detect High Intent",
-            text: "System detects when the user asks about cutting burn or runway crises.",
-            bullets: ["Questions like: 'Cut burn'", "Adding a 3rd entity", "Runway drops under 90 days"]
+            title: "Onboarding Assistant",
+            text: "Send helpful daily reminders based on the customer's own data. E.g. 'July accounts are closed — try asking: Did we make money?'",
+            bullets: ["Email or Slack reminders", "Uses customer's actual data context", "Guides toward activation steps"]
           },
           {
             num: "STEP 3",
-            title: "Slack Alert to Prasad",
-            text: "Prasad's sales channel gets an instant alert with the lead's details.",
-            bullets: ["Notifies team in 30 seconds", "Shows company size & burn", "Tags lead in CRM as high priority"]
+            title: "PQL Scoring (Product Events)",
+            text: "Score based on: 3rd entity connected, Pro features used, cash forecast below covenant, board pack created, team members invited.",
+            bullets: ["No private chat text used", "Rule-based scoring first (not ML)", "Score saved with audit trail"]
           },
           {
             num: "STEP 4",
-            title: "Upgrade to CFO Retainer",
-            text: "Prasad reaches out with helpful guidance and upgrades them to CFOLogic.",
-            bullets: ["Helpful, non-salesy touch", "Offer 1-on-1 CFO session", "Converts into $1,999–$4,500/mo"]
+            title: "Route Alert Correctly",
+            text: "If account is direct → alert Prasad's team with context (no chat text). If account came through a partner → alert the partner instead.",
+            bullets: ["Partner accounts protected", "Optional 'Talk to a CFO' button", "30-day dedup prevents alert fatigue"]
           }
         ]
       },
       {
-        tag: "PILLAR 4: AUTHORITY ENGINE",
-        title: "Building Trust on LinkedIn Automatically",
-        sub: "Establishing Prasad as the #1 CFO authority for growing founders.",
-        cost: "~$10/mo (Claude API for formatting draft posts)",
-        proof: "CFO services are trust purchases; organic inbound clients close 2x faster",
-        safety: "Zero generic AI fluff; strictly uses Prasad's real financial frameworks",
+        // MOTION D: Marketplaces, Lenders & Franchisors
+        tag: "MOTION D: MARKETPLACES, LENDERS & FRANCHISORS",
+        title: "Use Organisations That Already Reach Navigator's Customers",
+        sub: "Work with distribution channels that already have access to multi-entity business owners.",
+        cost: "Marketplace listing optimisation, lender co-marketing, franchisor outreach",
+        proof: "These channels give access to concentrated groups of ideal customers at lower cost",
+        safety: "Marketplace installs, HCs from partners/lenders, trial-to-paid from each channel",
         steps: [
           {
             num: "STEP 1",
-            title: "Real Client Data",
-            text: "Take real (anonymized) financial problems founders face every week.",
-            bullets: ["Why gross margin breaks", "Spreadsheet consolidation errors", "Cash runway mistakes"]
+            title: "Intuit App Store",
+            text: "Improve Navigator's listing. Focus on multi-entity use case. Collect reviews from beta customers.",
+            bullets: ["Optimise listing copy & screenshots", "Request reviews from happy users", "Track installs → trials → paid"]
           },
           {
             num: "STEP 2",
-            title: "AI Formats Post",
-            text: "AI turns the insight into a simple LinkedIn post or visual carousel.",
-            bullets: ["Clear, punchy language", "Formatted for easy reading", "Focuses on founder pain"]
+            title: "Operating System Marketplaces",
+            text: "Cloudbeds is live for hospitality. Get Navigator listed there. Explore ServiceTitan if that connection is live or planned.",
+            bullets: ["Cloudbeds marketplace listing", "Joint case study / webinar", "ServiceTitan if connection ready"]
           },
           {
             num: "STEP 3",
-            title: "Free Web Calculator",
-            text: "Embed simple tools like a 'Runway Calculator' on the website.",
-            bullets: ["Captures founder work emails", "Provides instant benchmark", "Links back to Navigator"]
+            title: "SBA Lenders & Community Banks",
+            text: "Navigator Pro tracks DSCR and loan covenants. Offer lenders a borrower health view (with borrower consent). Or co-send the Health Check.",
+            bullets: ["Borrower consents to share", "DSCR tracking is a Pro feature", "Lender sees covenant status only"]
           },
           {
             num: "STEP 4",
-            title: "Warm Inbound Leads",
-            text: "Founders reach out directly to Prasad after seeing his helpful content.",
-            bullets: ["Zero paid ads required", "Trust already established", "High willingness to pay"]
+            title: "Franchisors",
+            text: "One franchisor can recommend Navigator to hundreds of franchise owners, each managing multiple locations with separate QuickBooks files.",
+            bullets: ["Bulk recommendation to franchisees", "Multi-entity is the core use case", "Partner pricing applies"]
+          }
+        ]
+      },
+      {
+        // MOTION E: Targeted Outbound + Content
+        tag: "MOTION E: TARGETED OUTBOUND + CONTENT",
+        title: "Carefully Selected Outbound Emails & Content Distribution",
+        sub: "Start small (150–300 accounts). Offer the free Health Check. AI researches; human sends.",
+        cost: "Signal-detection agent, email drafter with fact-checker, LinkedIn post generator",
+        proof: "Real business signals make outreach relevant; Health Check offer is low-risk",
+        safety: "Positive reply rate, HC completions from outbound, cost per qualified meeting, CAN-SPAM compliant",
+        steps: [
+          {
+            num: "STEP 1",
+            title: "Detect Business Signals",
+            text: "Find owners creating new LLCs, SBA loan recipients, multi-location franchise owners, hotel/property groups, multi-entity job ads.",
+            bullets: ["State business registrations", "SBA loan data (public)", "Job ads: 'controller, multi-entity'"]
+          },
+          {
+            num: "STEP 2",
+            title: "AI Research & Draft Email",
+            text: "AI builds a fact sheet per prospect. Drafts a short email (<75 words) referencing one specific detail. Fact-checker blocks unsupported claims.",
+            bullets: ["Fact sheet with sources saved", "Automated claim verification", "Offer = free Health Check"]
+          },
+          {
+            num: "STEP 3",
+            title: "Human Reviews & Sends",
+            text: "A Pune-based SDR checks facts, approves the email, sends it and handles replies. Licensed data only. CAN-SPAM compliant.",
+            bullets: ["Human approves every email", "Licensed data (not LinkedIn scraping)", "Global opt-out list across domains"]
+          },
+          {
+            num: "STEP 4",
+            title: "Content Distribution",
+            text: "Turn each Insights article into 3–5 LinkedIn posts in Prasad's style. Prasad edits and approves. Build free calculators (DSCR, 13-week cash flow, consolidation) that link to the Health Check.",
+            bullets: ["AI drafts, Prasad approves", "Calculators → Health Check funnel", "Measure HCs from content, not likes"]
           }
         ]
       }
     ];
 
-    let currentPillar = 0;
+    let currentMotion = 0;
 
     function openModal(idx) {
-      loadPillar(idx);
+      loadMotion(idx);
       document.getElementById('flowModal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -1006,8 +1535,8 @@
       if (e.key === 'Escape') closeModal();
     });
 
-    function loadPillar(idx) {
-      currentPillar = idx;
+    function loadMotion(idx) {
+      currentMotion = idx;
       const data = flowData[idx];
 
       // Update Tabs
@@ -1023,7 +1552,7 @@
       document.getElementById('mProof').textContent = data.proof;
       document.getElementById('mSafety').textContent = data.safety;
 
-      // Render Horizontal Flowchart
+      // Render Vertical Flowchart
       const container = document.getElementById('flowPipeline');
       container.innerHTML = '';
 
@@ -1031,116 +1560,52 @@
         const card = document.createElement('div');
         card.className = 'flow-card';
         card.innerHTML = `
-          <div>
-            <div class="flow-step-num">${step.num}</div>
-            <div class="flow-card-title">${step.title}</div>
-            <div class="flow-card-text">${step.text}</div>
+          <div class="flow-card-head">
+            <span class="flow-step-num">${step.num}</span>
+            <h4 class="flow-card-title">${step.title}</h4>
           </div>
+          <div class="flow-card-text">${step.text}</div>
           <ul class="flow-card-bullets">
             ${step.bullets.map(b => `<li>${b}</li>`).join('')}
           </ul>
         `;
         container.appendChild(card);
 
-        // Add arrow between steps (not after the last one)
+        // Add downward vertical arrow between steps (not after the last one)
         if (i < data.steps.length - 1) {
           const arrow = document.createElement('div');
           arrow.className = 'flow-arrow-divider';
-          arrow.innerHTML = '➔';
+          arrow.innerHTML = '<div class="flow-arrow-badge">↓</div>';
           container.appendChild(arrow);
         }
       });
 
-      container.scrollLeft = 0;
+      container.scrollTop = 0;
     }
 
-    // Automatic horizontal scroll on mouse wheel hover
-    const flowContainer = document.getElementById('flowPipeline');
-    flowContainer.addEventListener('wheel', (evt) => {
-      if (evt.deltaY !== 0) {
-        evt.preventDefault();
-        flowContainer.scrollLeft += evt.deltaY * 1.5;
-      }
-    }, { passive: false });
-
-    // Drag-to-scroll support
-    let isDown = false;
-    let startX, scrollLeftPos;
-
-    flowContainer.addEventListener('mousedown', (e) => {
-      isDown = true;
-      flowContainer.style.cursor = 'grabbing';
-      startX = e.pageX - flowContainer.offsetLeft;
-      scrollLeftPos = flowContainer.scrollLeft;
-    });
-    flowContainer.addEventListener('mouseleave', () => {
-      isDown = false;
-      flowContainer.style.cursor = 'default';
-    });
-    flowContainer.addEventListener('mouseup', () => {
-      isDown = false;
-      flowContainer.style.cursor = 'default';
-    });
-    flowContainer.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - flowContainer.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      flowContainer.scrollLeft = scrollLeftPos - walk;
-    });
-
-    // AI SIMULATOR
+    // ========================================================================
+    // AI SIMULATOR — Multi-entity owner scenarios
+    // ========================================================================
     function runSim(scenario) {
+      const q = document.getElementById('sim-q');
+      const a = document.getElementById('sim-a');
+      const cta = document.getElementById('sim-cta');
+
       if (scenario === 1) {
-        document.getElementById('sim-q').textContent = '"What happens if we hire 2 engineers next month?"';
-        document.getElementById('sim-a').innerHTML = 'Adding 2 engineers ($22k/mo) drops your runway from <strong>4.2 months to 3.1 months</strong>. Recommended: Review working capital with CFOLogic.';
+        q.textContent = '"What happens if we hire 2 technicians on 1 November?"';
+        a.innerHTML = 'Adding 2 technicians moves your 13-week cash position from <strong>$142k to $109k</strong>. Your DSCR stays above the covenant at <strong>1.35×</strong>. Source: Summit Electric payroll + cash forecast.';
+        cta.innerHTML = '<button class="btn btn-secondary" style="font-size:0.75rem; padding:0.35rem 0.75rem; pointer-events:none;">Request CFO Advisory Discovery →</button>';
+      } else if (scenario === 2) {
+        q.textContent = '"Where are we leaking cash across all three companies?"';
+        a.innerHTML = 'Found <strong>$34,800 in overdue invoices</strong> older than 45 days at Summit HVAC, plus a <strong>$14,200 software subscription overlap</strong> between Summit Electric and Summit Facilities. Source: A/R aging report + vendor ledger across 3 entities.';
+        cta.innerHTML = '<button class="btn btn-secondary" style="font-size:0.75rem; padding:0.35rem 0.75rem; pointer-events:none;">Request CFO Advisory Discovery →</button>';
       } else {
-        document.getElementById('sim-q').textContent = '"Where are we leaking cash right now?"';
-        document.getElementById('sim-a').innerHTML = 'Found <strong>$34,800 in overdue client invoices</strong> older than 45 days, plus a $14,200 software subscription overlap across Entity 1 and Entity 2.';
+        q.textContent = '"Show me consolidated revenue for all three companies last quarter."';
+        a.innerHTML = 'Consolidated Q3 revenue across Summit Electric, Summit HVAC and Summit Facilities: <strong>$1.24M</strong> (up 8.3% vs Q2). Intercompany eliminations: <strong>$47k removed</strong>. Summit HVAC contributed 52% of total. Source: Revenue accounts, all 3 entities, intercompany elimination applied.';
+        cta.innerHTML = '<button class="btn btn-secondary" style="font-size:0.75rem; padding:0.35rem 0.75rem; pointer-events:none;">Inspect Source Ledger SQL →</button>';
       }
     }
 
-    // ROI CALCULATOR
-    function calcROI() {
-      const accounts = parseInt(document.getElementById('rng-acc').value);
-      document.getElementById('txt-acc').textContent = accounts.toLocaleString();
-
-      const calls = Math.round(accounts * 0.022);
-      const trials = Math.round(accounts * 0.04);
-      const retainers = Math.round(calls * 0.18);
-      const mrr = (trials * 299 * 0.3) + (retainers * 2800);
-
-      document.getElementById('res-calls').textContent = calls + ' calls';
-      document.getElementById('res-trials').textContent = trials + ' trials';
-      document.getElementById('res-clients').textContent = retainers + ' clients';
-      document.getElementById('res-mrr').textContent = '+$' + Math.round(mrr).toLocaleString() + '/mo';
-    }
-
-    calcROI();
-
-    // COPY LINKEDIN MESSAGE
-    function copyLinkedInMessage() {
-      const msg = `Hi Prasad Sir,
-
-I’ve completed the AI GTM Plan of Action case study for CFOLogic and NavigatorHQ.
-
-Rather than a generic marketing memo, I engineered a Dual-Engine Flywheel: using Navigator ($299/mo software) as a low-friction hook, and using AI workflows to automatically surface hot leads for CFOLogic's high-ticket CFO retainers ($1,999–$4,500/mo).
-
-I built a clean, minimal interactive portal with step-by-step flowcharts for you:
-🔗 Live Portal: https://atharva080324.github.io/cfologic-navigator-gtm/
-📦 GitHub Repo: https://github.com/Atharva080324/cfologic-navigator-gtm
-
-Would you have 15 minutes this week for a quick walkthrough?
-
-Best regards,
-Atharva Deshmukh`;
-
-      navigator.clipboard.writeText(msg).then(() => {
-        alert("LinkedIn message copied to clipboard!");
-      }).catch(() => {
-        alert("Please copy message from LinkedIn_Response_Message.md");
-      });
-    }
   </script>
 </body>
 </html>
